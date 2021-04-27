@@ -1,18 +1,17 @@
 import { Configuration } from 'webpack'
 
 const config: Configuration = {
-  entry: './main.ts',
+  entry: './main.js',
   target: 'node',
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.js']
   },
   module: {
     rules: [{
-      test: /\.ts$/,
+      test: /\.js$/,
       use: [
-        'ts-loader',
-        // './my-loader.ts', // Works
-        './node_modules/my-loader.ts' // Doesn't work
+        './my-loader.ts', // Works
+        // './node_modules/my-loader.ts' // Doesn't work
       ]
     }]
   }
