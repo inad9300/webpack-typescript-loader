@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "postinstall": "cp my-loader.ts node_modules/",
-    "start": "webpack --mode development"
+    "start": "TS_NODE_IGNORE= webpack --mode production",
+    "really-start": "TS_NODE_IGNORE=/dummy webpack --mode production"
   },
   "devDependencies": {
     "@types/node": "15.0.1",
