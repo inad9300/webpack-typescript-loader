@@ -9,10 +9,7 @@ const config: Configuration = {
   module: {
     rules: [{
       test: /\.js$/,
-      use: [
-        './my-loader.ts', // Works
-        // './node_modules/my-loader.ts' // Doesn't work
-      ]
+      use: ['./node_modules/my-loader.ts']
     }]
   }
 }
